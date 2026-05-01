@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment — Ganzon Health</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="page-booking">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <div class="brand-icon">GH</div>
+        <div class="brand-text">
+          <strong>Ganzon Health</strong>
+          <small>Private Care Network</small>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/departments">Services</a>
+        <a href="/appointment" class="active">Appointments</a>
+        <a href="/records">Records</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-ghost btn-sm" href="/records">View Records</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="appt-layout">
+    <!-- Sidebar -->
+    <aside class="appt-sidebar">
+      <span class="tag">Patient Portal</span>
+      <h2>Book your clinic visit</h2>
+      <p>Complete the form to secure your appointment. Confirmation is instant.</p>
+
+      <div class="sidebar-steps">
+        <div class="sidebar-step">
+          <div class="step-circle">1</div>
+          <div>
+            <h4>Patient details</h4>
+            <p>Your name and contact email.</p>
+          </div>
+        </div>
+        <div class="sidebar-step">
+          <div class="step-circle">2</div>
+          <div>
+            <h4>Select service</h4>
+            <p>Choose department, date, and sessions.</p>
+          </div>
+        </div>
+        <div class="sidebar-step">
+          <div class="step-circle">3</div>
+          <div>
+            <h4>Confirm booking</h4>
+            <p>Submit and receive your transaction ID.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Form -->
+    <div class="appt-form-wrap">
+      <div class="form-section-title">
+        <h2>Appointment details</h2>
+        <p>All fields are required to complete your booking.</p>
+      </div>
+
+      <form id="appointment-form" class="form-body">
+        <div class="form-row cols-2">
+          <div class="field">
+            <label for="patientName">Patient Name</label>
+            <input id="patientName" type="text" placeholder="Ana Mendoza" required>
+          </div>
+          <div class="field">
+            <label for="patientEmail">Email Address</label>
+            <input id="patientEmail" type="email" placeholder="ana@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row cols-3">
+          <div class="field">
+            <label for="serviceCode">Healthcare Service</label>
+            <select id="serviceCode" required>
+              <option value="WELLNESS">Wellness Consultation</option>
+              <option value="PEDIATRICS">Pediatrics Visit</option>
+              <option value="CARDIOLOGY">Cardiology Review</option>
+              <option value="WOMENS_HEALTH">Women's Health</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="appointmentDate">Appointment Date</label>
+            <input id="appointmentDate" type="date" required>
+          </div>
+          <div class="field">
+            <label for="sessionsRequested">Sessions</label>
+            <input id="sessionsRequested" type="number" min="1" max="3" value="1" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cardNumber">Billing Card Number</label>
+          <input id="cardNumber" type="text" placeholder="4111 1111 1111 1111" minlength="4" required>
+          <small>Demo only — any card number with 4+ digits is accepted.</small>
+        </div>
+
+        <div id="appointment-status" class="status-card neutral">
+          <strong>Ready to submit</strong>
+          <p>Your appointment will be confirmed instantly after submission.</p>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Confirm Appointment</button>
+          <a class="btn btn-ghost" href="/departments">View Services</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/appointment.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation — Ganzon Health</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="page-confirmation">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <div class="brand-icon">GH</div>
+        <div class="brand-text">
+          <strong>Ganzon Health</strong>
+          <small>Private Care Network</small>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/departments">Services</a>
+        <a href="/appointment">Appointments</a>
+        <a href="/records">Records</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-primary btn-sm" href="/appointment">Book Again</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="confirm-hero">
+    <div class="container">
+      <div class="confirm-hero-inner">
+        <div>
+          <div class="confirm-check">✓</div>
+          <h1>Appointment confirmed.</h1>
+          <p>Your booking has been saved. Keep your transaction ID for reference at the clinic.</p>
+          <div id="confirmation-status" class="status-card embedded">
+            <strong>Loading your summary…</strong>
+            <p>Retrieving appointment details.</p>
+          </div>
+        </div>
+        <div class="confirm-side-card">
+          <h4>Before your visit</h4>
+          <ul>
+            <li>Keep your appointment ID ready upon arrival.</li>
+            <li>Arrive 10 minutes before your scheduled time.</li>
+            <li>Bring a valid ID for patient verification.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="confirm-content">
+    <div class="container">
+      <div class="confirm-grid">
+        <div class="summary-card">
+          <div class="summary-card-header">
+            <h3>Appointment Summary</h3>
+            <p>Full details of your confirmed booking</p>
+          </div>
+          <div id="appointment-summary" class="summary-rows"></div>
+        </div>
+
+        <div class="next-card">
+          <h3>What's next?</h3>
+          <p>Need to book another service or review your past appointments?</p>
+          <a class="btn btn-primary" href="/appointment">Book Another Visit</a>
+          <a class="btn btn-ghost" href="/departments">Browse Services</a>
+          <a class="btn btn-ghost" href="/records">View All Records</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Ganzon Health</strong>
+        <p>Private Care Network</p>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Ganzon Health</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/confirmation.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

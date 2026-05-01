@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Ganzon Health</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="page-services">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <div class="brand-icon">GH</div>
+        <div class="brand-text">
+          <strong>Ganzon Health</strong>
+          <small>Private Care Network</small>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/departments" class="active">Services</a>
+        <a href="/appointment">Appointments</a>
+        <a href="/records">Records</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-primary btn-sm" href="/appointment">Book a Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <span class="tag">Clinical Departments</span>
+      <h1 class="display-lg" style="margin-top:16px;margin-bottom:12px;">Our medical services</h1>
+      <p class="body-md">Select a department to book your appointment directly.</p>
+    </div>
+  </div>
+
+  <section class="dept-grid-section">
+    <div class="container">
+      <div id="services-status" class="status-card neutral" style="margin-bottom:24px;">
+        <strong>Loading services</strong>
+        <p>Fetching clinic availability from the database.</p>
+      </div>
+      <div id="services-list" class="dept-grid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>Ganzon Health</strong>
+        <p>Private Care Network</p>
+      </div>
+      <nav class="footer-links">
+        <a href="/appointment">Book an Appointment →</a>
+      </nav>
+      <p class="footer-copy">© <span id="year"></span> Ganzon Health</p>
+    </div>
+  </footer>
+
+  <script src="/static/js/common.js"></script>
+  <script src="/static/js/departments.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
